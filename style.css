@@ -1,0 +1,314 @@
+:root {
+    --bg-color: #050000;
+    --text-color: #EAEAEA;
+    --accent-red: #D21F1B;
+    --nav-bg: #000000;
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Syne', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* == GLOBAL STYLES == */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    position: relative;
+}
+
+/* == HEADER == */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 2rem 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.btn-contact {
+    background-color: var(--accent-red);
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #b01815;
+}
+
+/* == HERO SECTION == */
+.hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Vertically center the content */
+    position: relative;
+    padding-top: 80px;
+    /* Offset for fixed header */
+}
+
+.hero-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+}
+
+.hero-title {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    /* Regular weight as per design */
+    font-size: 13vw;
+    line-height: 0.9;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #EAEAEA;
+    width: 100%;
+    letter-spacing: -0.02em;
+}
+
+.line-1 {
+    display: block;
+    margin-bottom: -1vw;
+    /* Tighten line height visually */
+    align-self: flex-start;
+    margin-left: 5vw;
+}
+
+.line-2 {
+    display: block;
+    align-self: flex-end;
+    margin-right: 5vw;
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.hero-3d-letter {
+    width: 40vw;
+    min-width: 300px;
+    height: auto;
+    filter: brightness(0.8) contrast(1.2);
+}
+
+.coordinates {
+    position: absolute;
+    top: 60%;
+    left: 3rem;
+    /* Align with container padding */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-primary);
+    font-size: 0.8rem;
+    color: var(--accent-red);
+}
+
+.coord-icon {
+    font-size: 1rem;
+}
+
+/* Sidebar Right */
+.sidebar-right {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.honors-tab {
+    background-color: #A0D9E6;
+    /* Light blue from image */
+    width: 40px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.honors-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.w-logo {
+    font-weight: 800;
+    color: #fff;
+}
+
+/* == FOOTER == */
+.footer-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 2rem;
+    z-index: 100;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.scroll-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+
+.arrow-down {
+    animation: bounce 2s infinite;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--accent-red);
+    object-fit: cover;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.role {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: #ccc;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-5px);
+    }
+
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Decorative Circle Ring - trying to match background circle */
+#hero::before {
+    content: '';
+    position: absolute;
+    width: 60vh;
+    height: 60vh;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -2;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    width: 45vh;
+    height: 45vh;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -2;
+}
